@@ -46,6 +46,7 @@ def main():
     formatted_response = f"Response: {response_text}\nSources: {sources}"
     print(formatted_response)
 
+
 if __name__ == "__main__":
     main()
 
