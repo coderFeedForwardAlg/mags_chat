@@ -4,6 +4,29 @@ from langchain_community.vectorstores import Chroma
 from langchain_openai import OpenAIEmbeddings
 from langchain_openai import ChatOpenAI
 from langchain.prompts import ChatPromptTemplate
+
+from fastapi.middleware.cors import CORSMiddleware
+
+from fastapi import FastAPI
+
+
+
+app = FastAPI();
+
+
+origins = [
+    "*",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
 CHROMA_PATH = "chroma"
 
 PROMPT_TEMPLATE = """
@@ -15,14 +38,14 @@ You are an AI that answers questons that imployers ask about a job candadit name
 
 Answer the question based on the above context: {question}
 """
-
-def main():
+@app.get("/{question}")
+def get_res(question):
     # Create CLI.
-    parser = argparse.ArgumentParser()
-    parser.add_argument("query_text", type=str, help="The query text.")
-    args = parser.parse_args()
-    query_text = args.query_text
-
+    # parser = argparse.ArgumentParser()
+    # parser.add_argument("query_text", type=str, help="The query text.")
+    # args = parser.parse_args()
+    query_text = question # args.query_text
+    print(question)
     # Prepare the DB.
     embedding_function = OpenAIEmbeddings()
     db = Chroma(persist_directory=CHROMA_PATH, embedding_function=embedding_function)
@@ -45,8 +68,8 @@ def main():
     sources = [doc.metadata.get("source", None) for doc, _score in results]
     formatted_response = f"Response: {response_text}\nSources: {sources}"
     print(formatted_response)
+    return {"res": response_text}
 
-
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
 
