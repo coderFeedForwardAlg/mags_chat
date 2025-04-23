@@ -47,7 +47,7 @@ def get_res(question):
     query_text = question # args.query_text
     print(question)
     # Prepare the DB.
-    # try {
+    # try: 
     embedding_function = OpenAIEmbeddings()
     db = Chroma(persist_directory=CHROMA_PATH, embedding_function=embedding_function)
 
