@@ -47,6 +47,7 @@ def get_res(question):
     query_text = question # args.query_text
     print(question)
     # Prepare the DB.
+    # try {
     embedding_function = OpenAIEmbeddings()
     db = Chroma(persist_directory=CHROMA_PATH, embedding_function=embedding_function)
 
@@ -69,7 +70,10 @@ def get_res(question):
     formatted_response = f"Response: {response_text}\nSources: {sources}"
     print(formatted_response)
     return {"res": response_text}
-
+    # } except () {
+    #     return {"res": "server error"}
+    # }
+    #
 # if __name__ == "__main__":
 #     main()
 
