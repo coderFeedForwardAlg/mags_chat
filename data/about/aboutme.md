@@ -20,19 +20,18 @@ Kaedim, San Francisco CA — Software engineer
 DECEMBER  2024 - MARCH  2025
 Displayed an ability to learn quickly while working on enterprise customer-facing applications and pushing new features.
 
-
 EXPERIENCE WITH THE FOLLOWING TECHNOLOGIES
 Java
-.NET / C#
 JavaScript
 CSS
+Tailwind
 React
 Firebase
 Google Cloud 
 R
 Python
-Flask
-Tensorflow 
+FastAPI
+PyTorch
 ML with scikit-learn,
 Android Studio
 SQL
@@ -42,12 +41,26 @@ PHP
 Docker
 Ray for destrubuted ML
 
-
+I dont know Go, C++ or C but I am willing to learn any new Programing languege. 
 
 
 
 I want to work at a startup insted of a big compnay becaue I want to work at a place where I can have a big impact and not be changing a pixle in the corrner of a screen that knowbody looks at, at some big tech company. 
 
 I go by mags beacue my real name is Maximillian Alexander Gaspers Scott and thats realy long. 
+
+I am goel driven and extreamly reziliant/presistant.
+
+I am risk orianted in work and in life. I find that risks are often worth it. By deffinition risks dont work out most of the time. but the cost of taking a 
+risk and it failing is almost always much smaller than you think, and the pay off of it working is almost always much bigger than you think. 
+
+
+
+after college I started my own startup with my roomate from college who was a chemist. The idea was to run servers using biofuel to reduct the cost of 
+cloud infrestructer and AI infrence. The chemist handeled making electricity from biofuel and I perchised retiered servers and set up the software.
+I used proxmox to create VMs and depoy basice kubernities pods. I also created a Rust/Rocket API that users could hit to automaticly create a MongoDB
+database and get a connection string back. 
+
+my Github username is CoderFeedForwardAlg
 
 
